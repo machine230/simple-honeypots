@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Secure Admin Portal</title>
+</head>
+<body>
+  <h2>Admin Login</h2>
+  <form onsubmit="logAttempt(); return false;">
+    Username: <input type="text" id="user"><br>
+    Password: <input type="password" id="pass"><br>
+    <button type="submit">Login</button>
+  </form>
+
+  <script>
+    function logAttempt() {
+      const user = document.getElementById('user').value;
+      const pass = document.getElementById('pass').value;
+      console.log(`Fake login attempt: ${user}:${pass}`);
+      alert("Login failed. Please try again.");
+    }
+  </script>
+</body>
+</html>
